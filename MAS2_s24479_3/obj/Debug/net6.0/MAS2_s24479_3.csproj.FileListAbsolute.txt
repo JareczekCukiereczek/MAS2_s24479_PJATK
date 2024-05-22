@@ -1,0 +1,15 @@
+/Users/kuba/RiderProjects/MAS2_s24479_3/MAS2_s24479_3/bin/Debug/net6.0/MAS2_s24479_3
+/Users/kuba/RiderProjects/MAS2_s24479_3/MAS2_s24479_3/bin/Debug/net6.0/MAS2_s24479_3.deps.json
+/Users/kuba/RiderProjects/MAS2_s24479_3/MAS2_s24479_3/bin/Debug/net6.0/MAS2_s24479_3.runtimeconfig.json
+/Users/kuba/RiderProjects/MAS2_s24479_3/MAS2_s24479_3/bin/Debug/net6.0/MAS2_s24479_3.dll
+/Users/kuba/RiderProjects/MAS2_s24479_3/MAS2_s24479_3/bin/Debug/net6.0/MAS2_s24479_3.pdb
+/Users/kuba/RiderProjects/MAS2_s24479_3/MAS2_s24479_3/obj/Debug/net6.0/MAS2_s24479_3.csproj.AssemblyReference.cache
+/Users/kuba/RiderProjects/MAS2_s24479_3/MAS2_s24479_3/obj/Debug/net6.0/MAS2_s24479_3.GeneratedMSBuildEditorConfig.editorconfig
+/Users/kuba/RiderProjects/MAS2_s24479_3/MAS2_s24479_3/obj/Debug/net6.0/MAS2_s24479_3.AssemblyInfoInputs.cache
+/Users/kuba/RiderProjects/MAS2_s24479_3/MAS2_s24479_3/obj/Debug/net6.0/MAS2_s24479_3.AssemblyInfo.cs
+/Users/kuba/RiderProjects/MAS2_s24479_3/MAS2_s24479_3/obj/Debug/net6.0/MAS2_s24479_3.csproj.CoreCompileInputs.cache
+/Users/kuba/RiderProjects/MAS2_s24479_3/MAS2_s24479_3/obj/Debug/net6.0/MAS2_s24479_3.dll
+/Users/kuba/RiderProjects/MAS2_s24479_3/MAS2_s24479_3/obj/Debug/net6.0/refint/MAS2_s24479_3.dll
+/Users/kuba/RiderProjects/MAS2_s24479_3/MAS2_s24479_3/obj/Debug/net6.0/MAS2_s24479_3.pdb
+/Users/kuba/RiderProjects/MAS2_s24479_3/MAS2_s24479_3/obj/Debug/net6.0/MAS2_s24479_3.genruntimeconfig.cache
+/Users/kuba/RiderProjects/MAS2_s24479_3/MAS2_s24479_3/obj/Debug/net6.0/ref/MAS2_s24479_3.dll

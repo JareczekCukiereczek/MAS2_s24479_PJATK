@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v6.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v6.0": {
+      "MAS2_s24479_3/1.0.0": {
+        "runtime": {
+          "MAS2_s24479_3.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "MAS2_s24479_3/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

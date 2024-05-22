@@ -1,0 +1,15 @@
+Kompozycja:
+W Library.cs, pole Sections jest listą obiektów Section, a metody AddSection i RemoveSection dodają i usuwają sekcje, odpowiednio ustawiając referencje biblioteki w sekcjach.
+W Section.cs, metoda SetLibrary ustawia referencję do biblioteki, co podkreśla, że sekcja jest częścią biblioteki i nie może istnieć bez niej.
+W Program.cs, po dodaniu sekcji do biblioteki, sprawdzamy i wyświetlamy, do której biblioteki należy sekcja.
+
+Kwalifikowana asocjacja:
+Znajduje się w Library.cs, pole Members jest słownikiem identyfikującym członków przez ich MembershipID.
+Metoda AddMember dodaje członka do słownika, jeśli nie istnieje członek o takim samym MembershipID.
+Metoda GetMemberByMembershipID wyszukuje członka w słowniku na podstawie MembershipID.
+
+Asocjacja z atrybutem:
+Znajduje się w klasie Borrow, gdzie pole BorrowDate jest atrybutem asocjacji pomiędzy członkiem a książką, reprezentującym datę wypożyczenia.
+
+Zwykła asocjacja:
+Znajduje się w klasie Book i Author, setAuthor ustawiamy autora danej ksiązki albo setBook i w argumencie przepsiujemy odpowiedniego autora
