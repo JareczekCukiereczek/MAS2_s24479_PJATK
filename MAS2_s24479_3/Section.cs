@@ -3,16 +3,16 @@ namespace MAS2_s24479_3;
 public class Section
 {
     public string Name { get; set; }
-    public List<Book> Books { get; set; }
+    private List<Book> Books { get; set; }
     
     private Library _library;
-    public List<Library> libraries { get; set; } // Kompozycja - biblioteka składa się z wielu sekcji, a sekcje nie mogą istnieć bez biblioteki.
+    private List<Library> libraries { get; set; } // Kompozycja - biblioteka składa się z wielu sekcji, a sekcje nie mogą istnieć bez biblioteki.
     
     
     private List<Book> books;
     
     
-    public Section(string name)
+    private Section(string name)
     {
         Name = name;
         Books = new List<Book>();
@@ -40,20 +40,27 @@ public class Section
         _library = library;
     }
 
+    public static void createSection(Library library,string name)
+    {
+        if (library == null)
+        {
+            throw new Exception("The given whole doesn't exist");
+        }
+
+        Section section = new Section(name);
+        library.AddSection(section);
+        section.SetLibrary(library);
+        
+    }
+
     public Library GetLibrary()
     {
         return _library;
     }
     
-    
     public IEnumerable<Book> GetBooks()
     {
         return books;
     }
-
-
-    public void AddToLibrary(Library library) //idk czy to jest dobrze jak źle to do usunięcia wraz z listą libraries.
-    {
-        libraries.Add(library);
-    }
+    
 }

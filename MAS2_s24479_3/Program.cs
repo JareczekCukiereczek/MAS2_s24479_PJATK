@@ -14,27 +14,21 @@ class Program
         Book book1 = new Book("Harry Potter i Kamień Filozoficzny");
         Book book2 = new Book("Hobbit");
         
-        
-        
         book1.setAuthor(author1);//asocjacja zwykła
         book2.setAuthor(author2);
         
-        author1.setBook(book1);//asocjacja zwykła - poł.zwrotne
+        //author1.setBook(book1);//asocjacja zwykła - poł.zwrotne
         
-
-        // Tworzenie sekcji i dodawanie książek
-        Section section1 = new Section("Fikcja");
-        section1.AddBook(book1);
-        section1.AddBook(book2);
-
+        
+        
+        
         // Tworzenie biblioteki i dodawanie sekcji
         Library library = new Library("Biblioteka Miejska na Woli");
-        library.AddSection(section1); // Kompozycja: Biblioteka składa się z Sekcji ale Sekcja jedna nie moze być w wielu bibliotekach
         
-        // Weryfikacja przypisania sekcji do biblioteki
-        Console.WriteLine($"Sekcja {section1.Name} jest częścią biblioteki: {section1.GetLibrary().Name}");
-
-
+        //Tworzenie sekcji - kompozycja
+        Section.createSection(library,"Czytelniczy wariaci");
+        
+        
         // Tworzenie członków
         Member member1 = new Member("001", "Kuba");
         Member member2 = new Member("002", "Rafał");

@@ -14,8 +14,8 @@ public class Borrow
         Member = member;
         Book = book;
         BorrowDate = borrowDate;
-        member.Borrows.Add(this); // Dodanie wypożyczenia do listy wypożyczeń członka
-        book.Borrows.Add(this); // Dodanie wypożyczenia do listy wypożyczeń książki
+        member.Borrows.Add(this); // Dodanie wypożyczenia do listy wypożyczeń membera
+        book.Borrows.Add(this); // Dodanie wypożyczenia do listy wypożyczeń books
 
     }
 }

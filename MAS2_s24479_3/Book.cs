@@ -6,10 +6,9 @@ using System.Collections.Generic;
 public class Book
 {
     public string Title { get; set; }
-    public Author Author { get; set; } // Zwykła asocjacja
+    private Author Author { get; set; } // Zwykła asocjacja
     public List<Borrow> Borrows { get; set; } // Lista wypożyczeń
     
-    //dodać listę borrow 
 
     public Book(string title)
     {
@@ -21,5 +20,6 @@ public class Book
     public void setAuthor(Author author)
     {
         Author = author;
+        author.setBook(this);
     }
 }

@@ -7,12 +7,12 @@ public class Library
 {
     public string Name { get; set; }
     public Dictionary<string, Member> Members { get; set; } // Kwalifikowana asocjacja przez MembershipID
-    public List<Section> Sections { get; set; } // Kompozycja - biblioteka składa się z wielu sekcji, a sekcje nie mogą istnieć bez biblioteki.
-    
+    private List<Section> Sections { get; set; } // Kompozycja - biblioteka składa się z wielu sekcji, a sekcje nie mogą istnieć bez biblioteki.
+
+    private static List<Section> allSections { get; set; } = new List<Section>();//wszystkie nasze sekcje
+
     private List<Borrow> borrows;
     
-    
-    //zapewnić aby sekcje był dodana do jednej biblioteki i nie mogła być dodana do innych
 
     public Library(string name)
     {
@@ -47,29 +47,20 @@ public class Library
         }
     }
 
-    public void AddSection(Section section) //sprawdzanie czy sekcja nie jest juz w innej bibliotece
+    public void AddSection(Section section) //kompozycja i polaczenie zwrotne dla kompozycji
     {
-        if (section.GetLibrary() != null)
+        if (allSections.Contains(section))
         {
-            Console.WriteLine($"Section {section.Name} is already associated with another library.");
-            return;
+            throw new Exception("This section is assign to other library");
         }
-
-        if (!Sections.Contains(section))
-        {
-            Sections.Add(section);
-            section.SetLibrary(this); // Setting the library for the section
-            Console.WriteLine($"Section {section.Name} has been added to library {Name}");
-        }
+        Sections.Add(section);
+        allSections.Add(section);
+        
     }
     public void RemoveSection(Section section)
     {
-        if (Sections.Contains(section))
-        {
-            Sections.Remove(section);
-            section.SetLibrary(null); // Removing the reference to the library
-            Console.WriteLine($"Section {section.Name} has been removed from library {Name}");
-        }
+        Sections.Remove(section);
+        allSections.Remove(section);
     }
     public void AddBorrow(Borrow borrow)
     {

@@ -4,7 +4,7 @@ public class Author
 {
     public string Name { get; set; }
     public string Biography { get; set; }
-    public Book Book;
+    private Book Book;
     
     private List<Book> books;
 
@@ -17,7 +17,12 @@ public class Author
 
     public void setBook(Book book)
     {
+        if (books.Contains(book))
+        {
+            return;
+        }
         books.Add(book);
+        book.setAuthor(this);
     }
     public IEnumerable<Book> GetBooks()
     {
