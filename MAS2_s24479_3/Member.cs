@@ -4,10 +4,10 @@ using System;
 
 public class Member
 {
-    public string MembershipID { get; set; }
     public string Name { get; set; }
-    
-    public List<Borrow> Borrows { get; set; } // Lista wypożyczeń borrows
+    public string MembershipID { get; set; }
+    private List<Borrow> Borrows { get; set; } // Lista wypożyczeń borrows
+    private List<Library> libraries { get; set; } = new List<Library>();
     
 
     public Member(string membershipID, string name)
@@ -25,6 +25,11 @@ public class Member
     public IEnumerable<Borrow> GetBorrows()
     {
         return Borrows;
+    }
+
+    public void addLibrary(Library library)
+    {
+        libraries.Add(library);
     }
 
     public void ListBorrows()

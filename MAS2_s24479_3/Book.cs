@@ -7,7 +7,7 @@ public class Book
 {
     public string Title { get; set; }
     private Author Author { get; set; } // Zwykła asocjacja
-    public List<Borrow> Borrows { get; set; } // Lista wypożyczeń
+    private List<Borrow> Borrows { get; set; } // Lista wypożyczeń
     
 
     public Book(string title)
@@ -21,5 +21,10 @@ public class Book
     {
         Author = author;
         author.setBook(this);
+    }
+
+    public void AddBorrow(Borrow borrow)
+    {
+        Borrows.Add(borrow);
     }
 }

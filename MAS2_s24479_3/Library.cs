@@ -5,8 +5,8 @@ using System.Collections.Generic;
 
 public class Library
 {
-    public string Name { get; set; }
-    public Dictionary<string, Member> Members { get; set; } // Kwalifikowana asocjacja przez MembershipID
+    private string Name { get; set; }
+    private Dictionary<string, Member> Members { get; set; } // Kwalifikowana asocjacja przez MembershipID
     private List<Section> Sections { get; set; } // Kompozycja - biblioteka składa się z wielu sekcji, a sekcje nie mogą istnieć bez biblioteki.
 
     private static List<Section> allSections { get; set; } = new List<Section>();//wszystkie nasze sekcje
@@ -51,7 +51,7 @@ public class Library
     {
         if (allSections.Contains(section))
         {
-            throw new Exception("This section is assign to other library");
+            throw new Exception("Sekcja dodana w innej bibliotece");
         }
         Sections.Add(section);
         allSections.Add(section);
@@ -79,5 +79,4 @@ public class Library
             Console.WriteLine($"{borrow.Member.Name} wypożyczył(a) '{borrow.Book.Title}' dnia {borrow.BorrowDate}");
         }
     }
-    
 }

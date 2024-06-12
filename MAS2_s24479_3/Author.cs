@@ -4,9 +4,9 @@ public class Author
 {
     public string Name { get; set; }
     public string Biography { get; set; }
-    private Book Book;
     
-    private List<Book> books;
+    
+    private List<Book> books;//asocjacja zwykla
 
     public Author(string name, string biography)
     {
@@ -27,5 +27,12 @@ public class Author
     public IEnumerable<Book> GetBooks()
     {
         return books;
+    }
+    public void PrintAllBooks()
+    {
+        foreach (var book in GetBooks())
+        {
+            Console.WriteLine(book.Title);
+        }
     }
 }

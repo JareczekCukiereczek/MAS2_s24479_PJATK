@@ -14,39 +14,45 @@ class Program
         Book book1 = new Book("Harry Potter i Kamień Filozoficzny");
         Book book2 = new Book("Hobbit");
         
-        book1.setAuthor(author1);//asocjacja zwykła
+        book1.setAuthor(author1);//asocjacja zwykła pomiędzy book a author
+        book2.setAuthor(author1);
         book2.setAuthor(author2);
-        
-        //author1.setBook(book1);//asocjacja zwykła - poł.zwrotne
-        
-        
+        Console.WriteLine("Wszystkie ksiązki authora1");
+        author1.PrintAllBooks();
         
         
         // Tworzenie biblioteki i dodawanie sekcji
         Library library = new Library("Biblioteka Miejska na Woli");
+        //bibliotek bez sekcji istnieje ale sekcja bez biblioteki nie istnieje
         
         //Tworzenie sekcji - kompozycja
         Section.createSection(library,"Czytelniczy wariaci");
         
         
         // Tworzenie członków
+        
         Member member1 = new Member("001", "Kuba");
         Member member2 = new Member("002", "Rafał");
 
         // Dodawanie członków do biblioteki
         library.AddMember(member1); // Kwalifikowana asocjacja: Członkowie są identyfikowani przez MembershipID
         library.AddMember(member2);
+
+        // Dodawanie członków do biblioteki - asocjacja kwalifikowana pomiędzy library a member z wykorzystaniem atrybutu membershipID który jednoznacznie identyfikuje membera
+        library.AddMember(member1); // Kwalifikowana asocjacja: Członkowie są identyfikowani przez MembershipID
+        library.AddMember(member2);
+        
         
         Member foundMember1 = library.GetMemberByMembershipID("001");
         if (foundMember1 != null)
         {
-            Console.WriteLine($"Znaleziono członka: {foundMember1.Name} z MembershipID: {foundMember1.MembershipID}");
+            Console.WriteLine($"Znaleziono członka: {foundMember1.Name}");
         }
 
         Member foundMember2 = library.GetMemberByMembershipID("002");
         if (foundMember2 != null)
         {
-            Console.WriteLine($"Znaleziono członka: {foundMember2.Name} z MembershipID: {foundMember2.MembershipID}");
+            Console.WriteLine($"Znaleziono członka: {foundMember2.Name}");
         }
 
         Member notFoundMember = library.GetMemberByMembershipID("003");

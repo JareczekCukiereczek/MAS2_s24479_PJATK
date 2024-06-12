@@ -44,7 +44,7 @@ public class Section
     {
         if (library == null)
         {
-            throw new Exception("The given whole doesn't exist");
+            throw new Exception("Calosc nie istenieje");
         }
 
         Section section = new Section(name);
